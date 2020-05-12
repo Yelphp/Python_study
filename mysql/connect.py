@@ -32,8 +32,16 @@ class Connect:
 	def run(self):
 		connect = mysql.connect(host=self._host,port=self._port,db=self._table,user=self._user,password=self._password,charset='utf8');
 		con = connect.cursor()
-		print(con.query('SELECT * FROM order'))
+		# print(dir(con))
+		t =con.execute('SELECT * FROM users')
+		print(con.fetchall()[0])
+		
+
+			           #cur.close()
+
+		# conn.close()
 		self.connect = connect;
+
 
 
 	def getConnect(self):
