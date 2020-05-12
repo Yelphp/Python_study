@@ -1,2 +1,4 @@
-#!usr/bin/env python
-import configParser
+from configobjData.index import Config
+
+t = Config()
+print(t.getConfig())
